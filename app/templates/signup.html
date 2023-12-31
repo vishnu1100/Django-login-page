@@ -1,0 +1,57 @@
+{% load static %}
+
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ok</title>
+    <link rel="shortcut icon" href="{% static 'index/assets/icon.png' %}" type="image/x-icon">
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'reg/css/nunito-font.css' %}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'reg/css/style.css' %}"/>
+
+
+
+    <style></style>
+</head>
+<body class="form-v6">
+	<div class="page-content">
+		<div class="form-v6-content">
+			<div class="form-left">
+				
+			</div>
+			<form class="form-detail" action="" method="post">
+                {% csrf_token %}
+				<h2>Register Form</h2>
+				<div class="form-row">
+					<input type="text" name="username" id="full-name" class="input-text" placeholder="Your Name" required>
+				</div>
+                
+				<div class="form-row">
+					<input type="text" name="email" id="your-email" class="input-text" placeholder="Email Address" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+				</div>
+				<div class="form-row">
+					<input type="password" name="password" id="password" class="input-text" placeholder="Password" required>
+				</div>
+				
+				<div class="form-row-last">
+					<input type="submit"  class="register" >
+                    
+                   				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
+    
+</body>
+</html>
