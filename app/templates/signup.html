@@ -1,67 +1,80 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
 
-
-
-    <!DOCTYPE html>
-<html>
 <head>
-	
-	
-	<script>
-	{% if user_exists %}
-		alert("User with the same username or email already exists.");
-	{% endif %}
-</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login/assets/css/style.css' %}">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico"/>
+    <title>Netflix | Sign Up </title>
+    <script>
 
+        {% if user_exist %}
+            alert("User with the same Email already exists.");
+        {% endif %}
+    </script>
 
-
-	<meta charset="utf-8">
-	<title>ok</title>
-    <link rel="shortcut icon" href="{% static 'index/assets/icon.png' %}" type="image/x-icon">
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- Font-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="{% static 'reg/css/nunito-font.css' %}">
-	<!-- Main Style Css -->
-    <link rel="stylesheet" href="{% static 'reg/css/style.css' %}"/>
-
-
-
-    <style></style>
 </head>
-<body class="form-v6">
-	<div class="page-content">
-		<div class="form-v6-content">
-			<div class="form-left">
-				
-			</div>
-			<form class="form-detail" action="" method="post">
-                {% csrf_token %}
-				<h2>Register Form</h2>
-				<div class="form-row">
-					<input type="text" name="username" id="full-name" class="input-text" placeholder="Your Name" required>
-				</div>
-                
-				<div class="form-row">
-					<input type="text" name="email" id="your-email" class="input-text" placeholder="Email Address" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
-				</div>
-				<div class="form-row">
-					<input type="password" name="password" id="password" class="input-text" placeholder="Password" required>
-				</div>
-				
-				<div class="form-row-last">
-					<input type="submit"  class="register" >
-                    
-                   				</div>
-			</form>
-		</div>
-	</div>
-</body>
-</html>
 
-    
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="home">
+                <img src="{% static 'login/assets/img/netflixlogo.png' %}" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="login_body">
+        <div class="login_box">
+            <h2>Sign Up</h2>
+            <form action="" method="post"  >
+                {% csrf_token %}
+                <div class="input_box">
+                    <input required type="username" name="username" placeholder=" Username">
+                </div>
+
+                <div class="input_box">
+                    <input required type="email" name="email"  placeholder="Email">
+                </div>
+                <div class="input_box">
+                    <input required type="password" name="password" placeholder="password ">
+                </div>
+
+                <div>
+                    <button type="submit" class="submit">
+                        Sign In 
+                    </button>
+                </div>
+            </form>
+
+            <div class="support">
+                <div class="remember">
+                    <span><input type="checkbox" checked style="margin: 0;padding: 0; height: 13px;"></span>
+                    <span>Remember me</span>
+                </div>
+                <div class="help">
+                    <a href="">
+                        Need help?
+                    </a>
+                </div>
+            </div>
+
+            <div class="login_footer">
+                
+
+                <div class="sign_up">
+                    <p>Already a member ? <a href="login">Sign in now.</a></p>
+                </div>
+
+                <div class="terms">
+                    <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href=""> Learn more.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

@@ -6,17 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/391827d54c.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="{% static 'main page/Assets/favicon.png' %}%" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'main page/style.css' %}%">
+    <link rel="shortcut icon" href="{%static 'main page/Assets/favicon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'main page/style.css' %}">
     <title>Netflix India - Watch TV Shows Online, Watch Movies Online</title>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script>
+        function myClickFunction() {
+            alert('Email Send Sucessfully');
+
+            
+        }
+    </script>
+    
+        
 </head>
 <body>
     <div class="header">
         <nav>
-            <a href=""><img class="logo" src="./main page/Assets/logo.png" alt="logo"></a>
+            <a href=""><img class="logo" src="{% static 'main page/Assets/logo.png' %}" alt="logo"></a>
             <div>
                 <button class="lang-btn"><i class="fa-solid fa-globe"></i> <select name="" id=""><option value="">English</option><option value="">Hindi</option><option value="">Malayalam</option></select> </button>
-               <a href="Login/login.html"> <button>Sign In</button></a>
+               <a href="{% url 'login'%}"> <button>Sign In</button></a>
             </div>
         </nav>
 
@@ -24,9 +35,10 @@
             <h1>Unlimited movies, TV shows and more.</h1>
             <h3>Watch anywhere. Cancel anytime.</h3>
             <p>Ready to watch? Enter your email to create or restart your membership.</p>
-            <form action="Login/login.html" class="email-signup">
+            <form action="" onsubmit="myClickFunction()"   class="email-signup">
                 <input type="email" placeholder="Email address" required>
-                <a href=""><button type="submit">Get Started</button></a>
+                <a href=""><button  type="submit">Get Started</button></a>
+                
             </form>
         </div>
     </div>
@@ -38,12 +50,12 @@
                 <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
             </div>
             <div class="img-col">
-                <img src="{% static 'main page/Assets/feature-1.png' %}%" alt="feature-1">
+                <img src="{% static 'main page/Assets/feature-1.png' %}" alt="feature-1">
             </div>
         </div>
         <div class="row">
             <div class="img-col">
-                <img src="./main page/Assets/feature-2.png" alt="feature-2">
+                <img src="{% static 'main page/Assets/feature-2.png' %}" alt="feature-2">
             </div>
             <div class="text-col">
                 <h2>Download your shows to watch offline.</h2>
@@ -56,12 +68,12 @@
                 <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
             </div>
             <div class="img-col">
-                <img src="./main page/Assets/feature-3.png" alt="feature-3">
+                <img src="{% static 'main page/Assets/feature-3.png' %}" alt="feature-3">
             </div>
         </div>
         <div class="row">
             <div class="img-col">
-                <img src="./main page/Assets/feature-4.png" alt="feature-4">
+                <img src="{% static 'main page/Assets/feature-4.png' %}" alt="feature-4">
             </div>
             <div class="text-col">
                 <h2>Create profiles for children.</h2>
@@ -126,9 +138,9 @@
         <small>Ready to watch? Enter your email to create or restart your membership.
         </small>
         
-        <form action="Login/login.html" class="email-signup">
+        <form action="" onsubmit="myClickFunction()" class="email-signup">
             <input type="email" placeholder="Email address" required>
-            <a href=""><button type="submit">Get Started</button></a>
+            <a href=""><button  type="submit">Get Started</button></a>
         </form>  
     </div>
 
@@ -137,32 +149,32 @@
 
         <div class="row">
             <div class="col">
-                <a href="error/error.html">FAQ</a>
-                <a href="error/error.html">Investor Relations</a>
-                <a href="error/error.html">Privacy</a>
-                <a href="https://fast.com/">Speed error/error.htmlTest</a>
+                <a href="">FAQ</a>
+                <a href="">Investor Relations</a>
+                <a href="">Privacy</a>
+                <a href="">Speed error/error.htmlTest</a>
             </div>
             <div class="col">
-                <a href="error/error.html">Help Centre</a>
-                <a href="error/error.html">Jobs</a>
-                <a href="error/error.html">Cookie Preferences</a>
-                <a href="error/error.html">Legal Notices</a>
+                <a href="">Help Centre</a>
+                <a href="">Jobs</a>
+                <a href="">Cookie Preferences</a>
+                <a href="">Legal Notices</a>
             </div>
             <div class="col">
-                <a href="error/error.html">Account</a>
-                <a href="error/error.html">Ways to Watch</a>
-                <a href="error/error.html">Corporate Information</a>
-                <a href="https://www.netflix.com/in/browse/genre/839338" target="_blank">Only on Netflix</a>
+                <a href="">Account</a>
+                <a href="">Ways to Watch</a>
+                <a href="">Corporate Information</a>
+                <a href="" target="_blank">Only on Netflix</a>
             </div>
             <div class="col">
-                <a href="error/error.html">Media Centre</a>
-                <a href="error/error.html">Terms of Use</a>
+                <a href="">Media Centre</a>
+                <a href="">Terms of Use</a>
                 <a href="https://github.com/vishnu1100/"target="_blank">Contact Us</a>
                 <a href="https://github.com/vishnu1100/Netflix_clone_3.0" target="_blank"><p><i class="fa fa-github" style="font-size:60px;color:rgb(1, 187, 255)"></i></p></a>
             </div>
         </div>
 
-        <button class="lang-btn"><i class="fa-solid fa-globe"></i> English <img src="./main page/Assets/down-icon.png"></button>
+        <button class="lang-btn"><i class="fa-solid fa-globe"></i> English <img src="{% static 'main page/Assets/down-icon.png' %}"></button>
 
         <p class="copyright-text">Netflix India</p>
         
