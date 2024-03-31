@@ -1,0 +1,126 @@
+@media(max-width:767.98px){
+    .netflix-padding-left{
+        padding-left: 10px !important;
+    }
+    
+    
+    .netflix-padding-right{
+        padding-right: 10px !important;
+    }
+    .navbar-brand img{
+        width: 43px;
+   }
+   .navbar{
+       padding-top: unset !important;
+       padding-bottom: unset !important;
+   }
+   i{
+       font-size: 12px;
+       cursor: pointer;
+       padding: 5px !important;
+   }
+   #Chidren{
+    display: none;
+   }
+   .netflix-profile{
+       margin-left: 5px ;
+   }
+   #profileDown{
+    display: none;
+   }
+   .netflix-dropdown-box{
+    display: block;
+}
+.netflix-nav{
+    display: none !important;
+}
+
+/* video */
+.netflix-home-video .content .left{
+    margin-left: 20px;
+}
+.netflix-home-video .content .left img{
+    width: 60px;
+    margin-top: 90px !important;
+}
+button{
+    font-size: 8px !important;
+    width: max-content !important;
+    opacity: 0.8;
+}
+
+/*video*/
+.slider{
+    top: 86px;
+    margin-left: 0px;
+}
+
+.slider2{
+    position: absolute;
+    top: 290px ;
+    z-index: 600;
+    display: none;
+
+}
+
+.slider3{
+    position: absolute;
+    top: 930px ;
+    z-index: 400;
+    display: none;
+}
+.slider4{
+    position: absolute;
+    top: 1130px ;
+    z-index: 300;
+    display: none;
+}
+.displaynone{
+    display: none;
+}
+.tab-change-btn{
+    display: none;
+}
+
+#trending_carousell{
+    margin: 0% 0% 0% -7%;
+}
+#trending_carouselr{
+    margin: 0% -1% 0% 0%;
+}
+#trailer_img{
+    margin: -187% 0% 0% 61%;
+    width: 50%;
+     height: 152px;
+}
+
+
+.card{
+    width: 250px;
+}
+.margin-right{
+    margin-right: unset;
+}
+.card-icon{
+    font-size: 8px !important;
+}
+.card-body{
+    top: 37px !important;
+}
+.netflix-card-text{
+    font-size: 6px;
+}
+.position-slider2{
+    top: 0px !important;
+}
+.margin-title{
+    margin-top: 100px;
+}
+.margin-title2{
+    margin-top: 14px;
+}
+.copy-right{
+    
+      margin-left: 0px !important;
+}
+}

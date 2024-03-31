@@ -1,0 +1,13 @@
+.login-top{
+    width: 100vm;
+    height: 60px;
+    background-color: black;
+    padding: 0px 20px;
+    display: flex;
+    align-self: center;
+}
+
+.login-top img{
+    width: 150px;
+    
+}

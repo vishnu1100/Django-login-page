@@ -9,6 +9,20 @@ def index(request):
 
 def error(request):
     return render(request, 'error.html')
+
+def home(request):
+    return render(request, 'home.html')
+
+
+
+
+
+
+
+
+
+
+
 # login function 
 def loginn(request):
 
@@ -31,16 +45,22 @@ def loginn(request):
 
 
 # registering function 
+
+
 def signup(request):
-
     if request.method == "POST":
-       username = request.POST['username']
-       email = request.POST['email']
-       password = request.POST['password']
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
 
-       myuser = User.objects.create_user(username,email,password)
-       myuser.save()
+        if User.objects.filter(username=username).exists() or User.objects.filter(email=email).exists():
+            # User with the same username or email already exists
+            return render(request, 'signup.html', {'user_exists': True})
 
-       return redirect('login')
+        # Create the user if it doesn't exist
+
+        user = User.objects.create_user(username, email, password)
+        user.save()
+        return redirect('login')
 
     return render(request, 'signup.html')
